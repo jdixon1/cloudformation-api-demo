@@ -1,0 +1,16 @@
+{
+  "name": "cloudformation-api-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jerry Dixon <jerry.dixon@bigcompass.com>",
+  "license": "MIT",
+  "scripts": {
+    "uploadToS3": "zip -r app.zip . && aws s3 cp app.zip s3://bc-cicd-demo-$STAGE/$npm_package_version.zip"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  },
+  "_moduleAliases": {
+    "~": "src"
+  }
+}
