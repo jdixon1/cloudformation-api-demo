@@ -5,7 +5,7 @@
   "author": "Jerry Dixon <jerry.dixon@bigcompass.com>",
   "license": "MIT",
   "scripts": {
-    "uploadToS3": "zip -r app.zip . && aws s3 cp app.zip s3://bc-cicd-demo-$STAGE/$npm_package_version.zip"
+    "uploadToS3": "mkdir -p .tmp && zip -r .tmp/app.zip . && aws s3 cp app.zip s3://bc-cicd-demo-$STAGE/$npm_package_version.zip && rm -rf .tmp"
   },
   "dependencies": {
     "module-alias": "^2.2.2"

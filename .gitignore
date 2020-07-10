@@ -3,6 +3,9 @@ node_modules
 dependency_layer
 jspm_packages
 
+# build
+.tmp
+
 # Serverless directories
 .serverless
 .webpack
