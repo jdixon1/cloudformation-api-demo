@@ -11,15 +11,11 @@ Resources:
     Properties:
       Handler: src/lambdas/helloWorld.handler
       Runtime: nodejs10.x
-      CodeUri:
-        Bucket: !Sub bc-cicd-demo-${Stage}
-        Key: 1.0.0.zip
+      CodeUri: src/lambdas/helloWorld.js
 
   helloNameLambda:
     Type: AWS::Serverless::Function
     Properties:
       Handler: src/lambdas/helloName.handler
       Runtime: nodejs10.x
-      CodeUri:
-        Bucket: !Sub bc-cicd-demo-${Stage}
-        Key: 1.0.0.zip
+      CodeUri: src/lambdas/helloName.js
