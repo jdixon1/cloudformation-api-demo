@@ -12,9 +12,8 @@ Resources:
       Handler: src/lambdas/hello-world.handler
       Runtime: nodejs10.x
       CodeUri:
-        FunctionCode:
-          Bucket: !Sub bc-cicd-demo-${Stage}
-          Key: 1.0.0.zip
+        Bucket: !Sub bc-cicd-demo-${Stage}
+        Key: 1.0.0.zip
 
   helloNameLambda:
     Type: AWS::Serverless::Function
@@ -22,6 +21,5 @@ Resources:
       Handler: src/lambdas/hello-name.handler
       Runtime: nodejs10.x
       CodeUri:
-        FunctionCode:
-          Bucket: !Sub bc-cicd-demo-${Stage}
-          Key: 1.0.0.zip
+        Bucket: !Sub bc-cicd-demo-${Stage}
+        Key: 1.0.0.zip
