@@ -6,13 +6,13 @@ Resources:
   helloWorldLambda:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: lambdas/helloWorld.handler
+      Handler: src/lambdas/helloWorld.handler
       Runtime: nodejs10.x
       CodeUri: .
 
   helloNameLambda:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: lambdas/helloName.handler
+      Handler: src/lambdas/helloName.handler
       Runtime: nodejs10.x
       CodeUri: .
