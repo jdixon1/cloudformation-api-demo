@@ -1,7 +1,7 @@
 require("module-alias/register");
 const HelloService = require("~/services/HelloService");
 
-exports.handler = (event) => {
+exports.handler = async (event) => {
   HelloService.sayHello();
 
   return {

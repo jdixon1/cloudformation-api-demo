@@ -5,7 +5,7 @@
   "author": "Jerry Dixon <jerry.dixon@bigcompass.com>",
   "license": "MIT",
   "scripts": {
-    "uploadToS3": "zip -r app.zip . && aws s3 cp app.zip s3://bc-cicd-demo-$STAGE/$npm_package_version.zip"
+    "package": "aws cloudformation package --template-file template.yml --s3-bucket bc-cicd-demo-$STAGE --output-template-file package.yml"
   },
   "dependencies": {
     "module-alias": "^2.2.2"

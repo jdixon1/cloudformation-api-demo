@@ -1,7 +1,4 @@
-Transform: AWS::Serverless-2016-10-21
-Parameters:
-  Stage:
-    Type: String
+Transform: AWS::Serverless-2016-10-31
 Resources:
   ######################
   # Handlers
@@ -9,13 +6,13 @@ Resources:
   helloWorldLambda:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: src/lambdas/hello-world.handler
+      Handler: src/lambdas/helloWorld.handler
       Runtime: nodejs10.x
-      CodeUri: !Sub s3://bc-cicd-demo-${Stage}/v1/app.zip
+      CodeUri: .
 
   helloNameLambda:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: src/lambdas/hello-name.handler
+      Handler: src/lambdas/helloName.handler
       Runtime: nodejs10.x
-      CodeUri: Sub s3://bc-cicd-demo-${Stage}/v1/app.zip
+      CodeUri: .
