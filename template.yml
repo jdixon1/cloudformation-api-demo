@@ -18,4 +18,4 @@ Resources:
     Properties:
       Handler: src/lambdas/hello-name.handler
       Runtime: nodejs10.x
-      CodeUri: Sub s3://bc-cicd-demo-${Stage}/v1/1.0.0.zip
+      CodeUri: !Sub s3://bc-cicd-demo-${Stage}/v1/1.0.0.zip
