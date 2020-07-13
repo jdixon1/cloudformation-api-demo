@@ -4,7 +4,7 @@ module.exports = {
    * @param {string} name - The name to output
    * @returns {void}
    */
-  sayHello(name = "Mars") {
+  sayHello(name = "World") {
     console.log(`Hello ${name}!`);
   },
 };

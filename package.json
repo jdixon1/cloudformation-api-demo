@@ -4,9 +4,6 @@
   "main": "index.js",
   "author": "Jerry Dixon <jerry.dixon@bigcompass.com>",
   "license": "MIT",
-  "scripts": {
-    "package": "aws cloudformation package --template-file template.yml --s3-bucket bc-cicd-demo-$STAGE --output-template-file package.yml"
-  },
   "dependencies": {
     "module-alias": "^2.2.2"
   },
