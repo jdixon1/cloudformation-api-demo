@@ -1,7 +1,4 @@
 Transform: AWS::Serverless-2016-10-31
-Parameters:
-  Stage:
-    Type: String
 Resources:
   ######################
   # Handlers
@@ -11,11 +8,11 @@ Resources:
     Properties:
       Handler: src/lambdas/helloWorld.handler
       Runtime: nodejs10.x
-      CodeUri: src/lambdas/helloWorld.js
+      CodeUri: src
 
   helloNameLambda:
     Type: AWS::Serverless::Function
     Properties:
       Handler: src/lambdas/helloName.handler
       Runtime: nodejs10.x
-      CodeUri: src/lambdas/helloName.js
+      CodeUri: src
