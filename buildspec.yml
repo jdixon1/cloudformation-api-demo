@@ -5,6 +5,6 @@ phases:
     commands:
       # - yarn install
       - yarn uploadToS3 STAGE=$STAGE
-  artifacts:
-    files:
-      - template.yml
+artifacts:
+  files:
+    - template.yml
