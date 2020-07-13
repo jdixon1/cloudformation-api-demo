@@ -9,7 +9,7 @@ Resources:
   helloWorldLambda:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: src/lambdas/hello-world.handler
+      Handler: src/lambdas/helloWorld.handler
       Runtime: nodejs10.x
       CodeUri:
         Bucket: !Sub bc-cicd-demo-${Stage}
@@ -18,7 +18,7 @@ Resources:
   helloNameLambda:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: src/lambdas/hello-name.handler
+      Handler: src/lambdas/helloName.handler
       Runtime: nodejs10.x
       CodeUri:
         Bucket: !Sub bc-cicd-demo-${Stage}
